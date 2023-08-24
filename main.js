@@ -10,11 +10,18 @@ const scenes = [
 ];
 
 choiceButton.addEventListener("click", () => {
-  scene++;
-  if (scene < scenes.length) {
-    storyElement.textContent = scenes[scene];
-  } else {
-    storyElement.textContent = "The end of the game. Thanks for playing!";
-    choiceButton.style.display = "none";
+  if (scene === 0) {
+    storyElement.textContent = "You pick the left path and discover a hidden treasure!";
+    choiceButton.textContent = "Continue";
+  } else if (scene === 1) {
+    storyElement.textContent = "You come across a friendly gnome who offers to guide you.";
+    choiceButton.textContent = "Follow the gnome";
+  } else if (scene === 2) {
+    storyElement.textContent = "The gnome leads you to a magical portal. Do you enter?";
+    choiceButton.textContent = "Enter the portal";
+  } else if (scene === 3) {
+    storyElement.textContent = "You find yourself in a new realm filled with wonders!";
+    choiceButton.style.display = "none"; // Hide the button to indicate the end
   }
+  scene++;
 });
