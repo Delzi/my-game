@@ -4,8 +4,8 @@ const choiceButton = document.getElementById("choice");
 let numEncounters = 0;
 let randomEncounter = Math.random();
 let inventory = [
-  "Item1": false;
-  "Item2": false;
+  "Item1": false,
+  "Item2": false,
 ];
 
 const encounters = [
