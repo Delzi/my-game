@@ -1,5 +1,6 @@
 const storyElement = document.getElementById("story");
 const choiceButton = document.getElementById("choice");
+const requiredEncounters = 5;
 
 let numEncounters = 0;
 let randomEncounter = Math.random();
@@ -15,8 +16,8 @@ const encounters = [
 ];
 
 choiceButton.addEventListener("click", () => {
-  if (numEncounters < encounters.length) {
-    storyElement.textContent = encounters[Math.floor(Math.random() * max)];
+  if (numEncounters < requiredEncounters) {
+    storyElement.textContent = encounters[Math.floor(Math.random() * encounters.length)];
     choiceButton.textContent = "Continue";
     numEncounters++;
   } else {
