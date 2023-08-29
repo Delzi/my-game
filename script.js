@@ -16,7 +16,7 @@ const encounters = [
 	"This is a random encounter; Flowers!",
 ];
 
-function getRandom() {
+function genRandom() {
 	if (lastEncounter >= 0) {
 		randomEncounter = encounters[Math.floor(Math.random() * encounters.length)];
 	} else {
